@@ -17,8 +17,8 @@
             <!-- Anchored to the ring so it stays aligned when lg size is set in CSS -->
             <div class="absolute -bottom-4 -right-4 z-10" data-animation="location-badge">
               <div class="hero-location-badge-scale">
-                <div class="flex items-center bg-black/80 backdrop-blur-sm text-white px-4 py-2 rounded-full shadow-xl border border-white/20 min-w-fit whitespace-nowrap">
-                  <i class="fas fa-map-marker-alt mr-2 text-primary-light flex-shrink-0"></i>
+                <div class="flex items-center bg-black/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-xl border border-white/20 min-w-fit whitespace-nowrap" style="color: #ffffff !important;">
+                  <i class="fas fa-map-marker-alt mr-2 flex-shrink-0" style="color: #ffffff !important;"></i>
                   <span class="font-semibold text-sm">{{ .Site.Params.hero_location }}</span>
                 </div>
               </div>
@@ -47,7 +47,7 @@
 
         <!-- Resume Download Button -->
         <div class="flex justify-center lg:justify-start hero-text-element" data-animation="buttons">
-          <a href="{{ .Site.Params.resume_url | absURL }}" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center bg-gradient-primary text-sm sm:text-lg px-4 sm:px-6 py-4 rounded-lg font-semibold shadow-lg button-hover" style="color: #ffffff !important;">
+          <a href="{{ .Site.Params.resume_url | absURL }}" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center bg-gradient-primary text-sm sm:text-lg px-4 sm:px-6 py-4 rounded-lg font-semibold shadow-lg button-hover no-underline hover:no-underline" style="color: #ffffff !important;">
             <i class="fas fa-file-pdf text-2xl mr-3"></i>
             {{ i18n "downloadResume" }}
           </a>
@@ -57,12 +57,4 @@
     </div>
   </div>
 
-  <a
-    id="pexels-credit"
-    class="pexels-credit"
-    data-animation="pexels-credit"
-    href="https://www.pexels.com"
-    target="_blank"
-    rel="noopener noreferrer"
-  >Photo / Pexels</a>
 </section>

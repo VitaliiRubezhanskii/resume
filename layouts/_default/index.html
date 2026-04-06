@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <script>
-        if (localStorage.getItem('darkMode') !== 'false') {
+        if (localStorage.getItem('darkMode') === 'true') {
             document.documentElement.classList.add('dark');
         }
     </script>
@@ -19,30 +19,37 @@
         body { visibility: hidden; }
         .dark body { visibility: hidden; }
         html, body {
-            height: 100vh;
-            height: 100svh;
-            overflow: hidden;
             margin: 0;
         }
         body {
             display: flex;
             flex-direction: column;
+            min-height: 100vh;
+            min-height: 100svh;
         }
         body > nav { flex-shrink: 0; }
         body > main {
             flex: 1;
-            min-height: 0;
-            overflow-y: auto;
             overflow-x: hidden;
         }
         body > footer { flex-shrink: 0; }
-        /* Hero must fill remaining space, not more */
+        /* On desktop, hero fills the viewport; on mobile, it flows naturally */
         .hero-section {
             min-height: 0 !important;
-            height: 100% !important;
+        }
+        @media (min-width: 1024px) {
+            .hero-section {
+                height: 100% !important;
+            }
         }
         /* Remove the spacer */
         body > .w-full.h-16 { display: none; }
+        /* Remove any visual seam between hero and footer */
+        main, section, footer {
+            border: none !important;
+            outline: none !important;
+            box-shadow: none !important;
+        }
     </style>
 </head>
 <body class="bg-bg dark:bg-bg text-text-primary dark:text-text-primary">
@@ -78,7 +85,7 @@
     <script src="https://cdn.jsdelivr.net/npm/fslightbox/index.js"></script>
 
     <script>
-        if (localStorage.getItem('darkMode') !== 'false') {
+        if (localStorage.getItem('darkMode') === 'true') {
             document.documentElement.classList.add('dark');
         } else {
             document.documentElement.classList.remove('dark');
