@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Block common asset/build directories that shouldn't be indexed
+Disallow: /js/
+Disallow: /css/
+
+Sitemap: https://vitaliirubezhanskii.github.io/resume/sitemap.xml

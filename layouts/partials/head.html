@@ -1,0 +1,87 @@
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- 🔖 Dynamic title -->
+<title>
+  {{ if .IsHome }}
+    {{ .Site.Title }} | {{ .Site.Params.tagline }}
+  {{ else }}
+    {{ .Title }} | {{ .Site.Title }}
+  {{ end }}
+</title>
+
+<!-- ✅ Meta tags -->
+<meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+<meta name="author" content="{{ .Site.Params.author | default .Site.Params.name }}" />
+<meta name="keywords" content="Vitalii Rubizhanskyi, Senior Java Engineer, Software Engineer, System Design, Solution Architect, Spring Boot, Kafka, AWS, Microservices, Warsaw, Poland" />
+<link rel="canonical" href="{{ .Permalink }}" />
+
+<!-- 🌐 Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }} | {{ .Site.Params.tagline }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}" />
+<meta property="og:description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:image" content="{{ with .Params.og_image }}{{ . | absURL }}{{ else }}{{ with site.Params.og_image }}{{ . | absURL }}{{ end }}{{ end }}">
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content="{{ .Site.Title }}" />
+
+<!-- 🐦 Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }} | {{ .Site.Params.tagline }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}" />
+<meta name="twitter:description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+<meta name="twitter:image" content="{{ with .Params.og_image }}{{ . | absURL }}{{ else }}{{ with site.Params.og_image }}{{ . | absURL }}{{ end }}{{ end }}" />
+
+<!-- 📋 JSON-LD Person schema for Google -->
+{{ if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ .Site.Params.name }}",
+  "givenName": "{{ .Site.Params.firstName }}",
+  "familyName": "{{ .Site.Params.lastName }}",
+  "jobTitle": "Senior Software Engineer",
+  "description": "{{ .Site.Params.description }}",
+  "url": "{{ .Site.BaseURL }}",
+  "image": "{{ .Site.Params.profile_image | absURL }}",
+  "email": "mailto:{{ .Site.Params.email }}",
+  "sameAs": [
+    "{{ .Site.Params.linkedin_url }}",
+    "{{ .Site.Params.github_url }}"
+  ],
+  "knowsAbout": [
+    "Java",
+    "Spring Boot",
+    "Spring WebFlux",
+    "Kafka",
+    "AWS",
+    "Kubernetes",
+    "Microservices",
+    "Event Sourcing",
+    "CQRS",
+    "System Design",
+    "Solution Architecture"
+  ],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Flix"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Warsaw",
+    "addressCountry": "Poland"
+  }
+}
+</script>
+{{ end }}
+
+<!-- 🔧 Favicon -->
+<link rel="icon" href="/favicon.ico" />
+
+<!-- Fonts & Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+<!-- GSAP Animation Library - Loaded dynamically from node_modules or CDN fallback -->
