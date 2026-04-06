@@ -1,0 +1,26 @@
+<!-- Blog Section -->
+<section id="blog" class="py-12 bg-bg-secondary dark:bg-bg-secondary border-t border-border-primary" data-animate>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    {{ with .Site.GetPage "blog" }}
+      <h2 class="text-3xl font-bold text-center mb-4 font-heading text-text-primary dark:text-text-primary">{{ .Title }}</h2>
+      <p class="text-lg text-center mb-12 text-text-secondary dark:text-text-tertiary italic">{{ .Params.intro }}</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {{ range .Pages }}
+        <a href="{{ .RelPermalink }}" class="block group">
+          <div class="bg-bg dark:bg-bg p-6 rounded-xl shadow-md border border-border-primary dark:border-border-primary card-hover h-full flex flex-col" data-animate>
+            <div class="flex items-center justify-between mb-3">
+              <time datetime="{{ .Date.Format "2006-01-02" }}" class="text-sm text-text-tertiary dark:text-text-tertiary">{{ .Date.Format "January 2, 2006" }}</time>
+            </div>
+            <h3 class="text-lg font-heading font-bold text-text-primary dark:text-text-primary mb-3 group-hover:text-primary dark:group-hover:text-primary-light transition-colors duration-300">{{ .Title }}</h3>
+            <p class="text-text-secondary dark:text-text-tertiary text-base leading-relaxed flex-1">{{ .Description }}</p>
+            <span class="inline-flex items-center mt-4 text-primary dark:text-primary-light font-medium text-sm group-hover:underline">
+              Read more <i class="fas fa-arrow-right ml-2 text-xs transition-transform duration-300 group-hover:translate-x-1"></i>
+            </span>
+          </div>
+        </a>
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+</section>
