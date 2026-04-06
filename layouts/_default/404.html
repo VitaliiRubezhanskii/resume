@@ -14,7 +14,7 @@
           </p>
           <div class="flex space-x-4">
             <a href="{{ .Site.Home.RelPermalink }}" class="bg-bg dark:bg-bg text-primary dark:text-primary-light px-6 py-3 rounded-lg font-medium hover:bg-bg-secondary dark:hover:bg-bg-secondary transition duration-300">{{ .Site.Params.fourofour_gohome | default (i18n "goHome") }}</a>
-            <a href="{{ .Site.Params.resume_url_en | relURL }}" target="_blank" rel="noopener" class="bg-primary text-text-primary px-6 py-3 rounded-lg font-medium hover:bg-primary-dark transition duration-300">{{ i18n "viewCV" }}</a>
+            <a href="{{ .Site.Params.resume_url_en | absURL }}" target="_blank" rel="noopener" class="bg-primary text-text-primary px-6 py-3 rounded-lg font-medium hover:bg-primary-dark transition duration-300">{{ i18n "viewCV" }}</a>
           </div>
         </div>
         {{ if .Site.Params.fourofour_image }}
@@ -22,7 +22,7 @@
           <div class="hero-image relative" data-animation="404-image">
             <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-bg bg-opacity-20 backdrop-filter backdrop-blur-lg border-4 border-border-primary border-opacity-30 overflow-hidden">
               <div class="w-full h-full overflow-hidden rounded-full">
-                <img src="{{ .Site.Params.fourofour_image | relURL }}" alt="Portrait of {{ .Site.Params.name }}" loading="lazy" decoding="async" class="object-cover w-full h-full" />
+                <img src="{{ .Site.Params.fourofour_image | absURL }}" alt="Portrait of {{ .Site.Params.name }}" loading="lazy" decoding="async" class="object-cover w-full h-full" />
               </div>
             </div>
             <div class="absolute -bottom-5 -right-5 bg-second text-white px-4 py-2 rounded-lg font-medium shadow-lg">

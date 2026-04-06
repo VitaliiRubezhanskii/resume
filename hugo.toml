@@ -1,7 +1,7 @@
 
 # CareerCanvas theme config
 
-baseURL = "https://yoursite.com"
+baseURL = "https://vitaliirubezhanskii.github.io/resume/"
 languageCode = "en-us"
 title = "Vitalii Rubizhanskyi"
 theme = "careercanvas"
@@ -18,7 +18,7 @@ defaultContentLanguageInSubdir = false
       hero_description = "A passionate professional with experience building great products from design to production."
       hero_location = "Warsaw, Poland"
       collab_tags = []
-      resume_url = "/files/Vitalii_Rubizhanskyi_Senior.pdf"
+      resume_url = "files/Vitalii_Rubizhanskyi_Senior.pdf"
 
 [build]
   writeStats = true
@@ -55,7 +55,7 @@ defaultContentLanguageInSubdir = false
   lastName = "Rubizhanskyi"
   name = "Vitalii Rubizhanskyi"
   email = "vitalii.rubezhanskii@gmail.com"
-  profile_image = "/images/my-photo.jpeg"
+  profile_image = "images/my-photo.jpeg"
   author = "Vitalii Rubizhanskyi"
   og_image = "images/your-og.png"
   description = "Personal portfolio and resume site."
@@ -66,7 +66,7 @@ defaultContentLanguageInSubdir = false
   calendly_url = ""
   calendly_height = "700px"
   copyright = "Vitalii Rubizhanskyi"
-  resume_url_en = "/files/Vitalii_Rubizhanskyi_Senior.pdf"
+  resume_url_en = "files/Vitalii_Rubizhanskyi_Senior.pdf"
   resume_label = "View CV"
   # sectionPagesMenu = "main"
   formspreeendpoint = ""

@@ -7,7 +7,7 @@
           <div class="hero-profile-ring relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-primary p-1 shadow-2xl">
             <div class="w-full h-full rounded-full overflow-hidden bg-white">
               <img
-                src="{{ .Site.Params.profile_image | relURL }}"
+                src="{{ .Site.Params.profile_image | absURL }}"
                 alt="Portrait of {{ .Site.Params.name }}"
                 loading="lazy"
                 decoding="async"
@@ -47,7 +47,7 @@
 
         <!-- Resume Download Button -->
         <div class="flex justify-center lg:justify-start hero-text-element" data-animation="buttons">
-          <a href="{{ .Site.Params.resume_url | relURL }}" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center bg-gradient-primary text-sm sm:text-lg px-4 sm:px-6 py-4 rounded-lg font-semibold shadow-lg button-hover" style="color: #ffffff !important;">
+          <a href="{{ .Site.Params.resume_url | absURL }}" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center bg-gradient-primary text-sm sm:text-lg px-4 sm:px-6 py-4 rounded-lg font-semibold shadow-lg button-hover" style="color: #ffffff !important;">
             <i class="fas fa-file-pdf text-2xl mr-3"></i>
             {{ i18n "downloadResume" }}
           </a>

@@ -23,7 +23,7 @@
           </a>
           {{ end }}
           {{ if .Site.Params.resume_url }}
-          <a href="{{ .Site.Params.resume_url | relURL }}" target="_blank" rel="noopener" class="text-text-secondary dark:text-text-muted text-third dark:text-third-light transition-transform duration-300 hover:scale-125" title="{{ i18n "viewCV" }}">
+          <a href="{{ .Site.Params.resume_url | absURL }}" target="_blank" rel="noopener" class="text-text-secondary dark:text-text-muted text-third dark:text-third-light transition-transform duration-300 hover:scale-125" title="{{ i18n "viewCV" }}">
             <i class="fas fa-file-alt text-3xl text-text-primary dark:text-text-primary"></i>
           </a>
           {{ end }}
