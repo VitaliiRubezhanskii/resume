@@ -5,4 +5,4 @@ Allow: /
 Disallow: /js/
 Disallow: /css/
 
-Sitemap: https://vitaliirubezhanskii.github.io/resume/sitemap.xml
+Sitemap: https://rubizhanskyi.dev/sitemap.xml
