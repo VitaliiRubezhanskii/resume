@@ -14,10 +14,10 @@ defaultContentLanguageInSubdir = false
     languageName = "English"
     weight = 1
     [languages.en.params]
-      tagline = "Software Engineer. Problem Solver. Team Player."
-      hero_description = "A passionate professional with experience building great products."
+      tagline = "Software Engineering. System Design. Solution Architecture."
+      hero_description = "A passionate professional with experience building great products from design to production."
       hero_location = "Warsaw, Poland"
-      collab_tags = ["Open Source", "Collaboration", "Innovation"]
+      collab_tags = []
       resume_url = "/files/Vitalii_Rubizhanskyi_Senior.pdf"
 
 [build]
@@ -50,7 +50,7 @@ defaultContentLanguageInSubdir = false
     weight = 6
 
 [params]
-  sections_disabled = ["blog", "testimonials"]
+  sections_disabled = ["blog", "testimonials", "contact_form"]
   firstName = "Vitalii"
   lastName = "Rubizhanskyi"
   name = "Vitalii Rubizhanskyi"

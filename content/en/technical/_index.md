@@ -25,7 +25,6 @@ intro = "Designing & building scalable service oriented or event driven applicat
 
 [[technical_groups]]
   title = "Scripting & Tooling"
- 
   [[technical_groups.skills]]
     name = "Bash"
     devicon_name = "bash"
@@ -44,7 +43,7 @@ intro = "Designing & building scalable service oriented or event driven applicat
     devicon_name = "angular"
 
 [[technical_groups]]
-  title = "Cloud & DevOps"
+  title = "Cloud"
   [[technical_groups.skills]]
     name = "AWS"
     devicon_name = "amazonwebservices"
@@ -52,30 +51,6 @@ intro = "Designing & building scalable service oriented or event driven applicat
   [[technical_groups.skills]]
     name = "Azure"
     devicon_name = "azure"
-  [[technical_groups.skills]]
-    name = "Docker"
-    devicon_name = "docker"
-  [[technical_groups.skills]]
-    name = "Kubernetes"
-    devicon_name = "kubernetes"
-  [[technical_groups.skills]]
-    name = "Terraform"
-    devicon_name = "terraform"
-  [[technical_groups.skills]]
-    name = "ArgoCD"
-    devicon_name = "argocd"
-  [[technical_groups.skills]]
-    name = "Helm"
-    devicon_name = "helm"
-  [[technical_groups.skills]]
-    name = "Gitlab"
-    devicon_name = "gitlab"
-  [[technical_groups.skills]]
-    name = "Bitbucket"
-    devicon_name = "bitbucket"
-  [[technical_groups.skills]]
-    name = "Jenkins"
-    devicon_name = "jenkins"
 
 [[technical_groups]]
   title = "Database, Search & Cache"
@@ -106,6 +81,33 @@ intro = "Designing & building scalable service oriented or event driven applicat
   [[technical_groups.skills]]
   name = "RabbitMQ"
   devicon_name = "rabbitmq"
+
+[[technical_groups]]
+  title = "DevOps"
+  [[technical_groups.skills]]
+    name = "Docker"
+    devicon_name = "docker"
+  [[technical_groups.skills]]
+    name = "Kubernetes"
+    devicon_name = "kubernetes"
+  [[technical_groups.skills]]
+    name = "Terraform"
+    devicon_name = "terraform"
+  [[technical_groups.skills]]
+    name = "ArgoCD"
+    devicon_name = "argocd"
+  [[technical_groups.skills]]
+    name = "Helm"
+    devicon_name = "helm"
+  [[technical_groups.skills]]
+    name = "Gitlab"
+    devicon_name = "gitlab"
+  [[technical_groups.skills]]
+    name = "Bitbucket"
+    devicon_name = "bitbucket"
+  [[technical_groups.skills]]
+    name = "Jenkins"
+    devicon_name = "jenkins"
 
 [[technical_groups]]
   title = "Observability"
