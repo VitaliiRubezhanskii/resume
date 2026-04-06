@@ -12,41 +12,46 @@ resume_label = "Download Resume"
   label = "English"
 
 [[positions]]
-  company = "Company Name"
-  company_url = "https://example.com"
-  company_description = "A brief description of the company."
-  role = "Senior Software Engineer"
-  period = "Jan 2023 – Present"
+  company = "Flix"
+  company_url = "https://www.flixbus.com/"
+  role = "Senior Java Developer"
+  period = "Dec 2021 – Present"
   industry = "Technology"
-  location = "City, Country"
+  location = "Warsaw, Poland"
   bullet_points = [
-    "Led development of a key product feature serving 100k+ users.",
-    "Improved system performance by 40% through architectural optimizations.",
-    "Mentored junior engineers and drove adoption of best practices.",
+      "Built internal customer service platform replacing legacy monolith; developed backend services and UI components",
+      "Migrated high-traffic services from Spring MVC to WebFlux, reducing resource consumption ~40%",
+     " Replaced RabbitMQ with Kafka (30K+ msg/min); decomposed domains into 12+ bounded-context services",
+      "Built REST APIs + OpenSearch integration achieving sub-200ms p95 latency on order/booking search",
+      "Implemented CQRS/Event Sourcing (Axon Framework) for train assignments — MySQL event store + MongoDB read projections; enabled regulatory audit trail, independent scaling, and multi-version API support",
+      "Provisioned AWS infra with Terraform; deployed to Kubernetes via GitOps (Argo CD); leveraged AI-assisted development (Claude Code, Cursor,      Copilot) for faster prototyping and code generation",
+      "Implemented Datadog SLI/SLO dashboards, reducing mean incident response time ~50%",
   ]
 
 [[positions]]
-  company = "Previous Company"
-  company_url = "https://example.com"
-  company_description = "Another company description."
-  role = "Software Engineer"
-  period = "Jun 2020 – Dec 2022"
+  company = "bSafe"
+  company_url = "https://www.getbsafe.com/"
+  role = "Senior Java Developer"
+  period = "Feb 2021 – Dec 2021"
   industry = "Finance"
-  location = "City, Country"
+    location = "Kharkiv, Ukraine"
   bullet_points = [
-    "Designed and implemented RESTful APIs used by mobile and web clients.",
-    "Built CI/CD pipelines reducing deployment time by 60%.",
-    "Collaborated cross-functionally with product and design teams.",
+      "Migrated monolith to microservices, decomposing 4 core domains by bounded context into independently deployable services",
+      "Introduced async messaging (SQS/SNS), reducing inter-service latency ~60% and decoupling 3 critical workflows",
+      "Implemented IaC (Terraform, 15+ managed resources); built serverless workflows (Lambda, API Gateway)",
   ]
 
 [[positions]]
-  company = "First Company"
-  company_url = "https://example.com"
-  role = "Junior Developer"
-  period = "Jan 2018 – May 2020"
-  location = "City, Country"
+  company = "CHI Software"
+  company_url = "https://chisw.com/"
+  role = "Senior Java Developer"
+  period = "May 2018 – Feb 2021"
+  location = "Kharkiv, Ukraine"
   bullet_points = [
-    "Developed internal tools automating manual business processes.",
-    "Contributed to open-source libraries used by the team.",
+      "Designed event-driven inter-service communication for medical data processing, handling 10K+ lab results/day",
+      "Developed microservices with Spring Boot and Kafka Streams for real-time container tracking across 20+ ports",
+      "Built event-sourced audit trail for container movements, enabling compliance reporting and dispute resolution",
+      "Implemented Azure AD (Entra ID) SSO using OAuth 2.0/OIDC and JWT, securing multi-tenant access for 50+ clients",
+      
   ]
 +++

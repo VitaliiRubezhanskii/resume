@@ -3,17 +3,17 @@ title = 'About'
 draft = false
 date = '2026-04-05'
 
-intro = "A brief introduction about yourself goes here. Describe your background and what drives you."
+intro = "Senior Java Engineer with deep expertise in Java/Kotlin, Spring Framework ecosystem, and event-driven systems. 8+ years building cloud-native backends across finance, medical, logistics, and transport domains. Hands-on with monolith-to-microservices migrations, reactive systems, and full-stack delivery. Combine strong architectural thinking with AI-assisted development for faster, higher-quality output."
 
 [[quickfacts]]
   title = "Location"
   icon = "fa-map-marker-alt"
-  value = "City, Country"
+  value = "Warsaw, Poland"
 
 [[quickfacts]]
   title = "Experience"
   icon = "fa-briefcase"
-  value = "X+ years"
+  value = "8+ years"
 
 [[quickfacts]]
   title = "Education"
@@ -30,7 +30,7 @@ intro = "A brief introduction about yourself goes here. Describe your background
   title = "Languages"
   icon = "fa-language"
   kind = "languages"
-  value = "English (Native), Other Language (Fluent)"
+  value = "English, Ukrainian, Russian, German (B1), Polish(B1)"
 
 study = "Describe your educational background here. Where you studied and what you learned."
 
