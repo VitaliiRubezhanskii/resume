@@ -1,0 +1,6 @@
+public/
+resources/
+node_modules/
+.idea/
+.hugo_build.lock
+hugo_stats.json

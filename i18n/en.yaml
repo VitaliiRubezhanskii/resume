@@ -1,0 +1,46 @@
+# Hero
+helloIm: "Hello, I'm"
+getInTouch: "Get in Touch"
+viewCV: "View CV"
+
+# About
+aboutMe: "About Me"
+aboutName: "About"
+quickFacts: "Quick Facts"
+more: "More"
+interests: "Interests"
+languages: "Languages"
+connectOnLinkedIn: "Connect on LinkedIn"
+
+# Experience
+keyAchievements: "Key Achievements"
+downloadResume: "Download Resume"
+
+# Contact
+contactFormLabel: "Contact"
+sendMeAMessage: "Send Me a Message"
+contactInformation: "Contact Information"
+contactFormLabelNameLabel: "Name"
+contactFormLabelEmailLabel: "Email"
+contactFormLabelSubjectLabel: "Subject"
+contactFormLabelMessageLabel: "Message"
+contactFormSendBtnLabel: "Send"
+
+# General
+relatedContent: "Related Content"
+learnMore: "Learn More"
+
+# 404
+pageNotFound: "Page Not Found"
+pageNotFoundSubtitle: "The page you are looking for does not exist."
+goHome: "Go Home"
+certainlyNotHere: "Certainly not here"
+
+# Shortcodes
+viewOnGithub: "View on GitHub"
+demoImageAlt: "Demo image"
+iframeIdRequired: "An iframe ID is required"
+fullscreen: "Fullscreen"
+galleryNotFound: "Gallery not found"
+youtubePlayerTitle: "YouTube Video Player"
+vimeoPlayerTitle: "Vimeo Video Player"

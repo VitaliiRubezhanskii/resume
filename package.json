@@ -1,0 +1,14 @@
+{
+  "name": "resume-site",
+  "private": true,
+  "scripts": {
+    "dev": "hugo server -D",
+    "build": "hugo --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3",
+    "postcss": "^8",
+    "postcss-cli": "^10",
+    "autoprefixer": "^10"
+  }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        if (localStorage.getItem('darkMode') !== 'false') {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+    {{ partial "head.html" . }}
+    {{ partial "color-variables.html" . }}
+
+    {{ $styles := resources.Get "css/main.css" | postCSS (dict "config" "./postcss.config.js") }}
+    {{ if eq hugo.Environment "production" }}
+      {{ $styles = $styles | minify | fingerprint }}
+    {{ end }}
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}?v={{ now.Unix }}" data-version="{{ now.Unix }}">
+    <style>
+        body { visibility: hidden; }
+        .dark body { visibility: hidden; }
+        html, body {
+            height: 100vh;
+            height: 100svh;
+            overflow: hidden;
+            margin: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        body > nav { flex-shrink: 0; }
+        body > main {
+            flex: 1;
+            min-height: 0;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+        body > footer { flex-shrink: 0; }
+        /* Hero must fill remaining space, not more */
+        .hero-section {
+            min-height: 0 !important;
+            height: 100% !important;
+        }
+        /* Remove the spacer */
+        body > .w-full.h-16 { display: none; }
+    </style>
+</head>
+<body class="bg-bg dark:bg-bg text-text-primary dark:text-text-primary">
+
+    {{ partial "nav.html" . }}
+    <div class="w-full h-16"></div>
+
+    <main>
+        {{ partial "hero.html" . }}
+    </main>
+
+    {{ partial "footer.html" . }}
+
+    {{ $scripts := resources.Get "js/scripts.js" }}
+    {{ $gsap := resources.Get "js/gsap-animations.js" }}
+    {{ $pexels := resources.Get "js/pexels-background.js" }}
+    {{ $colors := resources.Get "js/dynamic-colors.js" }}
+    {{ $deviconFallback := resources.Get "js/devicon-fallback.js" }}
+    {{ if eq hugo.Environment "production" }}
+      {{ $scripts = $scripts | minify | fingerprint }}
+      {{ $gsap = $gsap | minify | fingerprint }}
+      {{ $pexels = $pexels | minify | fingerprint }}
+      {{ $colors = $colors | minify | fingerprint }}
+      {{ $deviconFallback = $deviconFallback | minify | fingerprint }}
+    {{ end }}
+    {{ partial "pexels-config.html" . }}
+    {{ partial "color-config.html" . }}
+    <script src="{{ $scripts.RelPermalink }}"></script>
+    <script src="{{ $deviconFallback.RelPermalink }}"></script>
+    <script src="{{ $colors.RelPermalink }}"></script>
+    <script src="{{ $gsap.RelPermalink }}"></script>
+    <script src="{{ $pexels.RelPermalink }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fslightbox/index.js"></script>
+
+    <script>
+        if (localStorage.getItem('darkMode') !== 'false') {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+        window.addEventListener('load', function() {
+            document.body.style.visibility = 'visible';
+        });
+    </script>
+</body>
+</html>

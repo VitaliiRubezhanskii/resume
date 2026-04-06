@@ -1,0 +1,109 @@
+
+# CareerCanvas theme config
+
+baseURL = "https://yoursite.com"
+languageCode = "en-us"
+title = "Vitalii Rubizhanskyi"
+theme = "careercanvas"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+
+[languages]
+  [languages.en]
+    contentDir = "content/en"
+    languageName = "English"
+    weight = 1
+    [languages.en.params]
+      tagline = "Software Engineer. Problem Solver. Team Player."
+      hero_description = "A passionate professional with experience building great products."
+      hero_location = "Warsaw, Poland"
+      collab_tags = ["Open Source", "Collaboration", "Innovation"]
+      resume_url = "/files/Vitalii_Rubizhanskyi_Senior.pdf"
+
+[build]
+  writeStats = true
+
+[menus]
+  [[menus.main]]
+    name = "About"
+    url = "about"
+    weight = 1
+  [[menus.main]]
+    name = "Skills"
+    url = "skills"
+    weight = 2
+  [[menus.main]]
+    name = "Experience"
+    url = "experience"
+    weight = 3
+  [[menus.main]]
+    name = "Technical"
+    url = "technical"
+    weight = 4
+  [[menus.main]]
+    name = "Testimonials"
+    url = "testimonials"
+    weight = 5
+  [[menus.main]]
+    name = "Contact"
+    url = "contact"
+    weight = 6
+
+[params]
+  firstName = "Vitalii"
+  lastName = "Rubizhanskyi"
+  name = "Vitalii Rubizhanskyi"
+  email = "vitalii.rubezhanskii@gmail.com"
+  profile_image = "/images/my-photo.jpeg"
+  author = "Vitalii Rubizhanskyi"
+  og_image = "images/your-og.png"
+  description = "Personal portfolio and resume site."
+  linkedin_url = "https://www.linkedin.com/in/vitalii-rubizhanskyi-9877b668/"
+  linkedin_text = "https://www.linkedin.com/in/vitalii-rubizhanskyi-9877b668/"
+  github_url = "https://github.com/VitaliiRubezhanskii"
+  github_text = "github.com/VitaliiRubezhanskii"
+  calendly_url = ""
+  calendly_height = "700px"
+  copyright = "Vitalii Rubizhanskyi"
+  resume_url_en = "/files/Vitalii_Rubizhanskyi_Senior.pdf"
+  resume_label = "View CV"
+  # sectionPagesMenu = "main"
+  formspreeendpoint = ""
+  pexelsapikey = ""
+
+  [[params.social]]
+    icon = "linkedin-in"
+    url = "https://www.linkedin.com/in/vitalii-rubizhanskyi-9877b668/"
+  [[params.social]]
+    icon = "github"
+    url = "https://github.com/VitaliiRubezhanskii"
+
+[taxonomies]
+  tag = "tags"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "monokai"
+
+[server]
+  [[server.headers]]
+    for = "/**/*.css"
+    [server.headers.values]
+      Content-Type = "text/css"
+
+[security]
+  [security.funcs]
+    getenv = ['^HUGO_', '^CI$']
+
+[params.color_palettes]
+  [[params.color_palettes.palette]]
+    name = "ocean"
+    main_color = "#1E40AF"
+    second_color = "#06B6D4"
+    third_color = "#10B981"
+
+[params.pexels]
+  queries = ["long span bridges", "skyscrapers", "sky and clouds"]
