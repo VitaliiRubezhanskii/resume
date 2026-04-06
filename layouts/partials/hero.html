@@ -1,0 +1,68 @@
+<section id="home" class="flex items-center justify-center gradient-bg text-white relative overflow-hidden hero-section">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-24">
+    <div class="hero-inner-row flex flex-col lg:flex-row items-center justify-between gap-12 w-full">
+      <!-- Left content - Profile image -->
+      <div class="hero-profile-col lg:w-1/2 flex justify-center lg:justify-start mt-8 md:mt-0" data-animation="profile-column">
+        <div class="relative">
+          <div class="hero-profile-ring relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-primary p-1 shadow-2xl">
+            <div class="w-full h-full rounded-full overflow-hidden bg-white">
+              <img
+                src="{{ .Site.Params.profile_image | relURL }}"
+                alt="Portrait of {{ .Site.Params.name }}"
+                loading="lazy"
+                decoding="async"
+                class="object-cover w-full h-full rounded-full"
+              />
+            </div>
+            <!-- Anchored to the ring so it stays aligned when lg size is set in CSS -->
+            <div class="absolute -bottom-4 -right-4 z-10" data-animation="location-badge">
+              <div class="hero-location-badge-scale">
+                <div class="flex items-center bg-black/80 backdrop-blur-sm text-white px-4 py-2 rounded-full shadow-xl border border-white/20 min-w-fit whitespace-nowrap">
+                  <i class="fas fa-map-marker-alt mr-2 text-primary-light flex-shrink-0"></i>
+                  <span class="font-semibold text-sm">{{ .Site.Params.hero_location }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Right content -->
+      <div class="text-center lg:text-left mt-8 md:mt-0" style="width: 100%; max-width: 600px; min-width: 300px;">
+        <!-- Greeting -->
+        <div class="mb-4 mt-4 md:mt-0 hero-text-element" data-animation="greeting">
+          <span class="hero-text-accent font-medium text-lg block">{{ i18n "helloIm" }}</span>
+        </div>
+        <!-- Name -->
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 font-heading leading-tight hero-name hero-text-element" data-animation="name">
+          {{ .Site.Params.firstName }} {{ .Site.Params.lastName }}
+        </h1>
+        <!-- Tagline: one block; each cycling phrase wraps (up to ~2 lines); split phrases in JS on ". " -->
+        <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-6 font-light hero-text-accent hero-text-element w-full flex items-center justify-center lg:justify-start" data-animation="tagline">
+          <span class="typewriter w-full max-w-full text-center lg:text-left" data-original-text="{{ .Site.Params.tagline }}">{{ .Site.Params.tagline }}</span>
+        </h2>
+        <!-- Description -->
+        <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto lg:mx-0 hero-text-muted leading-relaxed hero-text-element px-4 py-3 rounded-lg" style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(8px);" data-animation="description">
+          {{ .Site.Params.hero_description }}
+        </p>
+
+        <!-- Resume Download Button -->
+        <div class="flex justify-center lg:justify-start hero-text-element" data-animation="buttons">
+          <a href="{{ .Site.Params.resume_url | relURL }}" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center bg-gradient-primary text-sm sm:text-lg px-4 sm:px-6 py-4 rounded-lg font-semibold shadow-lg button-hover" style="color: #ffffff !important;">
+            <i class="fas fa-file-pdf text-2xl mr-3"></i>
+            {{ i18n "downloadResume" }}
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <a
+    id="pexels-credit"
+    class="pexels-credit"
+    data-animation="pexels-credit"
+    href="https://www.pexels.com"
+    target="_blank"
+    rel="noopener noreferrer"
+  >Photo / Pexels</a>
+</section>
