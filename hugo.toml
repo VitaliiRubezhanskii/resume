@@ -1,7 +1,7 @@
 
 # CareerCanvas theme config
 
-baseURL = "https://vitaliirubezhanskii.github.io/resume/"
+baseURL = "https://rubizhanskyi.dev/resume/"
 languageCode = "en-us"
 title = "Vitalii Rubizhanskyi"
 theme = "careercanvas"
