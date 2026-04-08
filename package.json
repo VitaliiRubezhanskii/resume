@@ -6,9 +6,10 @@
     "build": "hugo --minify"
   },
   "devDependencies": {
-    "tailwindcss": "^3",
+    "@tailwindcss/typography": "^0.5.19",
+    "autoprefixer": "^10",
     "postcss": "^8",
     "postcss-cli": "^10",
-    "autoprefixer": "^10"
+    "tailwindcss": "^3"
   }
 }

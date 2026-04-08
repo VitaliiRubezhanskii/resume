@@ -58,7 +58,7 @@ defaultContentLanguageInSubdir = false
   profile_image = "images/my-photo.jpeg"
   author = "Vitalii Rubizhanskyi"
   og_image = "images/your-og.png"
-  description = "Personal portfolio and resume site."
+  description = "Vitalii Rubizhanskyi — Senior Java Software Engineer based in Warsaw, Poland. 8+ years building scalable distributed systems with Spring Boot, Kafka, AWS, Kubernetes, and event-driven architectures. CV, experience, and technical expertise."
   linkedin_url = "https://www.linkedin.com/in/vitalii-rubizhanskyi-9877b668/"
   linkedin_text = "https://www.linkedin.com/in/vitalii-rubizhanskyi-9877b668/"
   github_url = "https://github.com/VitaliiRubezhanskii"
@@ -88,6 +88,10 @@ defaultContentLanguageInSubdir = false
       unsafe = true
   [markup.highlight]
     style = "monokai"
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+    ordered = false
 
 [server]
   [[server.headers]]
