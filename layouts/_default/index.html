@@ -39,7 +39,39 @@
         }
         @media (min-width: 1024px) {
             .hero-section {
-                height: 100% !important;
+                min-height: 0 !important;
+                height: auto !important;
+                padding-bottom: 1rem !important;
+            }
+            .hero-section > div {
+                padding-top: 5rem !important;
+            }
+            .hero-section .hero-profile-ring {
+                width: 18rem !important;
+                height: 18rem !important;
+            }
+            .hero-section h1.hero-name {
+                font-size: 3.5rem !important;
+                margin-bottom: 1rem !important;
+            }
+            .hero-section h2 {
+                margin-bottom: 1rem !important;
+            }
+            .hero-section p[data-animation="description"] {
+                margin-bottom: 1.25rem !important;
+            }
+            .latest-posts-section {
+                padding-top: 0.5rem !important;
+                padding-bottom: 1.5rem !important;
+            }
+            .latest-posts-section .grid > a {
+                padding: 1rem !important;
+            }
+            .latest-posts-section h2 {
+                font-size: 1.25rem !important;
+            }
+            .latest-posts-section .mb-8 {
+                margin-bottom: 1rem !important;
             }
         }
         /* Remove the spacer */
@@ -59,6 +91,7 @@
 
     <main>
         {{ partial "hero.html" . }}
+        {{ partial "latest-posts.html" . }}
     </main>
 
     {{ partial "footer.html" . }}

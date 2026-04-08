@@ -1,6 +1,6 @@
 +++
 title = 'Kafka + Postgres: 7 Ways Your System Corrupts Data and How to Fix It'
-description = 'Seven failure modes when turning Kafka events into database state — and how to design for them. Idempotency, transactional outbox, deduplication and more.'
+description = 'Seven failure modes when turning Kafka events into database state and how to design for them. Idempotency, transactional outbox, deduplication and more.'
 date = '2026-04-08'
 tags = ['kafka', 'postgres', 'event-driven', 'distributed-systems']
 type = 'blog'
@@ -38,7 +38,7 @@ Now your customer has two identical charges.
 
 Kafka guarantees **at-least-once** delivery. Not exactly-once. Not "probably once." **At-least-once.**
 
-That means every message you consume *will* arrive again someday — after:
+That means every message you consume *will* arrive again someday after:
 
 - a consumer rebalance
 - a crash or restart
