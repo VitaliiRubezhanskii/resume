@@ -1,0 +1,19 @@
+{{- $type := .Get "type" | default "tip" -}}
+{{- $icon := .Get "icon" -}}
+{{- $title := .Get "title" -}}
+{{- if not $icon -}}
+  {{- if eq $type "tip" -}}{{- $icon = "fa-lightbulb" -}}{{- end -}}
+  {{- if eq $type "warning" -}}{{- $icon = "fa-triangle-exclamation" -}}{{- end -}}
+  {{- if eq $type "info" -}}{{- $icon = "fa-circle-info" -}}{{- end -}}
+  {{- if eq $type "takeaway" -}}{{- $icon = "fa-bullseye" -}}{{- end -}}
+  {{- if eq $type "danger" -}}{{- $icon = "fa-circle-exclamation" -}}{{- end -}}
+{{- end -}}
+<aside class="callout callout-{{ $type }}">
+  <div class="callout-icon">
+    <i class="fas {{ $icon }}"></i>
+  </div>
+  <div class="callout-body">
+    {{ with $title }}<div class="callout-title">{{ . }}</div>{{ end }}
+    <div class="callout-content">{{ .Inner | .Page.RenderString }}</div>
+  </div>
+</aside>
