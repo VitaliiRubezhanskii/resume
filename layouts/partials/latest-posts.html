@@ -1,0 +1,34 @@
+{{ $posts := where .Site.RegularPages "Type" "blog" }}
+{{ with $posts | first 3 }}
+<section class="latest-posts-section pt-4 pb-12 bg-white dark:bg-bg">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between mb-8">
+      <h2 class="text-2xl md:text-3xl font-bold font-heading text-text-primary dark:text-text-primary flex items-center">
+        <i class="fas fa-pen-nib mr-3 text-primary dark:text-primary-light"></i>
+        Latest posts
+      </h2>
+      <a href="{{ "blog" | relURL }}" class="text-sm font-semibold text-primary dark:text-primary-light hover:underline inline-flex items-center">
+        View all <i class="fas fa-arrow-right ml-2"></i>
+      </a>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {{ range . }}
+      <a href="{{ .RelPermalink }}" class="group block bg-bg-secondary dark:bg-bg-tertiary rounded-xl p-6 shadow-sm hover:shadow-md border border-border-primary dark:border-border-primary transition-all">
+        <div class="flex items-center text-xs text-text-tertiary dark:text-text-tertiary mb-3">
+          <i class="far fa-calendar mr-2"></i>
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+          <span class="mx-2">·</span>
+          <i class="far fa-clock mr-1"></i>{{ .ReadingTime }} min
+        </div>
+        <h3 class="text-base md:text-lg font-bold font-heading text-text-primary dark:text-text-primary group-hover:text-primary dark:group-hover:text-primary-light transition-colors leading-snug mb-2">
+          {{ .Title }}
+        </h3>
+        {{ with .Description }}
+        <p class="text-sm text-text-secondary dark:text-text-tertiary leading-relaxed line-clamp-2">{{ . }}</p>
+        {{ end }}
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
