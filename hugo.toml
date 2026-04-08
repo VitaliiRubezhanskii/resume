@@ -50,7 +50,7 @@ defaultContentLanguageInSubdir = false
     weight = 6
 
 [params]
-  sections_disabled = ["blog", "testimonials", "contact_form"]
+  sections_disabled = ["testimonials", "contact_form"]
   firstName = "Vitalii"
   lastName = "Rubizhanskyi"
   name = "Vitalii Rubizhanskyi"

@@ -933,6 +933,16 @@ section[data-animate] {
   scroll-margin-top: 6rem;
 }
 
+.markdown-content h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 1em;
+  padding-bottom: 0.5em;
+  border-bottom: 3px solid var(--color-primary);
+  line-height: 1.2;
+}
+
 .markdown-content h2 {
   font-size: 1.875rem;
   margin-top: 2.5em;
@@ -1096,6 +1106,106 @@ section[data-animate] {
   background: var(--color-bg-secondary);
   font-weight: 700;
   color: var(--color-text-primary);
+}
+
+/* ==================================================================
+   Callout / Takeaway Blocks (used in blog articles)
+   ================================================================== */
+.callout {
+  display: flex;
+  gap: 1rem;
+  margin: 2em 0;
+  padding: 1.25rem 1.5rem;
+  border-radius: 0.75rem;
+  border-left: 4px solid var(--color-primary);
+  background: var(--color-bg-secondary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.callout-icon {
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125rem;
+}
+
+.callout-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.callout-title {
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.callout-content {
+  color: var(--color-text-primary);
+  line-height: 1.65;
+}
+
+.callout-content > *:first-child { margin-top: 0; }
+.callout-content > *:last-child { margin-bottom: 0; }
+
+.callout-content p {
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+/* Type variants */
+.callout-takeaway {
+  border-left-color: var(--color-third);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--color-third) 8%, var(--color-bg-secondary)), var(--color-bg-secondary));
+}
+.callout-takeaway .callout-icon { background: var(--color-third); }
+.callout-takeaway .callout-title { color: var(--color-third); }
+
+.callout-warning {
+  border-left-color: #f59e0b;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), var(--color-bg-secondary));
+}
+.callout-warning .callout-icon { background: #f59e0b; }
+.callout-warning .callout-title { color: #f59e0b; }
+
+.callout-danger {
+  border-left-color: #ef4444;
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.08), var(--color-bg-secondary));
+}
+.callout-danger .callout-icon { background: #ef4444; }
+.callout-danger .callout-title { color: #ef4444; }
+
+.callout-info {
+  border-left-color: var(--color-second);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--color-second) 8%, var(--color-bg-secondary)), var(--color-bg-secondary));
+}
+.callout-info .callout-icon { background: var(--color-second); }
+.callout-info .callout-title { color: var(--color-second); }
+
+.dark .callout {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 640px) {
+  .callout {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+  }
+  .callout-icon {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
 }
 
 /* ==================================================================
